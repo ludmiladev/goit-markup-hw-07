@@ -1,12 +1,12 @@
 
-:root {
-    --title-text-color: #212121;
-    --primary-text-color: #757575;
-    --accent-color: #2196f3;
-    --primary-gov-color: #ffffff;
-    --secondary-sov-color: #2f303a;
-    --secondary-lav-color: #f5f4fa;
-}
+
+    $title-text-color: #212121;
+    $primary-text-color: #757575;
+    $accent-color: #2196f3;
+    $primary-gov-color: #ffffff;
+    $secondary-sov-color: #2f303a;
+    $secondary-lav-color: #f5f4fa;
+
 
 *,
 *::before,
@@ -91,24 +91,11 @@ header .container {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p  {
     margin-top: 0;
     margin-bottom: 0;
     color: var(--title-text-color);
-}
-h1,
-h2,
-h3,
-h4,
-p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-p {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 /*Cтилизация меню макета портфолио*/

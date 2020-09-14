@@ -17,26 +17,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.geroj-content {
+  &-content {
     text-align: center;
     margin: 0 auto;
     max-width: 696px;
     padding-right: 15px;
     padding-left: 15px;
 }
-
-.geroj-title {
+  &-title {
     margin: 0 auto 30px;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    @include font(44px, 1.36, 900);
+       letter-spacing: 0.06em;
     text-transform: uppercase;
     /*делаем, чтоб все буквы были заглавными*/
 
-    color: var(--primary-gov-color);
+ color: $primary-gov-color;
+}
 }
 
 .geroj-cnopca {
@@ -48,16 +44,16 @@
     padding: 10px 31px;
 
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+ @include font(16px, 1.88, 700);
     letter-spacing: 0.06em;
 
-    color: var(--primary-gov-color);
-    background-color: var(--accent-color);
+  color: $primary-gov-color);
+    background-color: $accent-color;
 
     border-radius: 4px;
     /*округляем края кнопки*/
     border-width: 0;
-    /*толщина*/
+  &:focus {
+    outline: none;
+  }
 }

@@ -1,7 +1,7 @@
 /* Стилизация секции наша команда*/
 
 .comanda {
-    background-color: var(--secondary-lav-color);
+    background-color: $secondary-lav-color;
 }
 
 
