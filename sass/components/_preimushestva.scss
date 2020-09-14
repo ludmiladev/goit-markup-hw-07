@@ -1,0 +1,57 @@
+
+.rabot {
+    padding-top: 94px;
+    /*Устанавливает значение поля от верхнего края содержимого элемента. Полем называется расстояние от внутреннего края рамки элемента до воображаемого прямоугольника, ограничивающего его содержимое*/
+    padding-bottom: 94px;
+}
+
+.pros .cape {
+    display: flex;
+}
+
+.pros .top-menu {
+    width: 270px;
+    margin-right: 30px;
+}
+
+
+    &::before {
+    display: block;
+    content: "";
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pros-microscop::before {
+    background-image: url(../images/microscop.svg);
+}
+
+.pros-hcasi::before {
+    background-image: url(../images/hcasi.svg);
+}
+
+.pros-nout::before {
+    background-image: url(../images/nout.svg);
+}
+
+.pros-cosmonavt::before {
+    background-image: url(../images/cosmonavt.svg);
+}
+
+.pros-title {
+    margin-bottom: 10px;
+  @include font(14px, 1.14, 700);
+    text-transform: uppercase;
+
+    color: $title-text-color;
+}
+
+.pros-absaz {
+  @include font(14px, 1.72);
+    color: $primary-text-color;
+}
+
