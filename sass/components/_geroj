@@ -39,7 +39,6 @@
     display: block;
     width: 200px;
     min-height: 50px;
-    /*минимальная высота*/
     margin: 0 auto;
     padding: 10px 31px;
 
@@ -51,7 +50,6 @@
     background-color: $accent-color;
 
     border-radius: 4px;
-    /*округляем края кнопки*/
     border-width: 0;
   &:focus {
     outline: none;

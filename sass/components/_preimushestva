@@ -1,6 +1,4 @@
 
-/* Cтилизация наших преимуществ */
-
 .rabot {
     padding-top: 94px;
     /*Устанавливает значение поля от верхнего края содержимого элемента. Полем называется расстояние от внутреннего края рамки элемента до воображаемого прямоугольника, ограничивающего его содержимое*/
@@ -13,13 +11,11 @@
 
 .pros .top-menu {
     width: 270px;
-}
-
-.pros .top-menu {
     margin-right: 30px;
 }
 
-.pros .top-menu::before {
+
+    &::before {
     display: block;
     content: "";
     height: 120px;
@@ -48,17 +44,14 @@
 
 .pros-title {
     margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+  @include font(14px, 1.14, 700);
     text-transform: uppercase;
 
-    color: var(--title-text-color);
+    color: $title-text-color;
 }
 
 .pros-absaz {
-    font-size: 14px;
-    line-height: 1.72;
-    color: var(--primary-text-color);
+  @include font(14px, 1.72);
+    color: $primary-text-color;
 }
 

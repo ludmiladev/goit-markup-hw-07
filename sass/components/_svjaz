@@ -36,12 +36,11 @@
 }
 
 .nav-svjaz-convert {
-    /* fill: var(--primary-text-color);*/
     fill: currentColor;
     width: 16px;
     height: 12px;
     margin-right: 10px;
-    /*margin-top: 15px;*/
+
 
 }
 

@@ -9,9 +9,9 @@
 .cartinca {
     padding-top: 0;
 
-}
 
-.cartinca-title {
+
+ &-title {
     margin-bottom: 50px;
     text-align: center;
     font-size: 36px;
@@ -42,6 +42,6 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: var(--primary-gov-color);
+    color: $primary-gov-color;
     background-color: rgba(47, 48, 58, 0.8);
 }
