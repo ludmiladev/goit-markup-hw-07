@@ -218,12 +218,11 @@ header .container {
 
 .nav-svjaz:hover,
 .nav-svjaz:focus {
-  var(--accent-color);
   color: var(--accent-color);
 }
 
 .nav-svjaz a {
-  fill: var(--primary-text-color);
+  /*fill: var(--primary-text-color);*/
   color: var(--primary-text-color);
   /*display: flex;
   align-items: center;*/
