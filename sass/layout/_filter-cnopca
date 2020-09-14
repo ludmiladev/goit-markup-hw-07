@@ -1,0 +1,41 @@
+/*Стилизация макета портфолио*/
+
+
+.rabot {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+
+.filter {
+    display: flex;
+    justify-content: center;
+    /*выравнивание картинок по центру относительно всего контейнера*/
+    margin-bottom: 34px;
+}
+
+  &-cnopca {
+    display: inline-block;
+    padding: 6px 22px;
+
+    font-family: inherit;
+    @include font(16px, 1.62, 500);
+
+    color: $title-text-color;
+    background-color: $secondary-lav-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    border-width: 0;
+}
+
+.cnopca {
+    margin-right: 8px;
+}
+
+.filter-cnopca:hover,
+/*ховер и фокус*/
+  &-cnopca:focus {
+    color: $primary-gov-color;
+    background-color: $accent-color;
+}
