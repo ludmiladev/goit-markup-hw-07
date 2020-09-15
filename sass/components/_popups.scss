@@ -1,76 +1,85 @@
+/* Cтилизация модального окна*/
 
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 
-    z-index: 1;
-    /* transform: scale(1); */
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    /* transform: scale(0.75); */
+  z-index: 1;
+  /* transform: scale(1); */
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  /* transform: scale(0.75); */
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 528px;
-    height: 581px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
 
-    background-color: $primary-gov-color;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+  background-color: var(--primary-gov-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    .backdrop.is-hidden {
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .knopka-modal {
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: $primary-gov-color;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-    fill: $accent-color;
+  background: var(--primary-gov-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /**/
 }
+
+
+.knopka-modal:hover,
+.knopka-modal:focus {
+  fill: var(--accent-color);
 }
 
 .modal-form {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 }
 
-. &-title {
-    /* заглавие оставьте свои данные, мы вам перезвоним*/
-    @include font(20px, 1.15);
-    text-align: center;
-    margin-bottom: 12px;
+.modal-form-title {
+  /* заглавие оставьте свои данные, мы вам перезвоним*/
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 12px;
 
-    color: $title-text-color;
+  color: var(--title-text-color);
 
 }
 
@@ -78,117 +87,129 @@
 /*нажимая кнопку поля формы меняют цвет на синий*/
 .modal-form-message:focus,
 .knopka-modal:focus {
-    outline: none;
+  outline: none;
 }
 
 .modal-form-input-block {
-    position: relative;
-    height: 40px;
-    margin-bottom: 10px;
-}
-input {
-    /* параметры ввода текста в поля формы при заполнении*/
-    width: 100%;
-    height: 40px;
-    padding-left: 42px;
-    margin-bottom: 10px;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    color: $title-text-color;
-  &-svg {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    pointer-events: none;
+  position: relative;
+  height: 40px;
+  margin-bottom: 10px;
 }
 
+.modal-form-input {
+  /* параметры ввода текста в поля формы при заполнении*/
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  margin-bottom: 10px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--title-text-color);
+  /*цвет ввода текста в поля формы при заполнении*/
 }
 
 .modal-form-input-label,
 .modal-form-message-label {
-    /*обрамление полей формы*/
-    margin-bottom: 4px;
-    @include font(12px, 1.17);
+  /*обрамление полей формы*/
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
 
-    letter-spacing: 0.01em;
+  letter-spacing: 0.01em;
 
-    color: $primary-text-color;
+  color: var(--primary-text-color);
 }
 
+.modal-form-input-svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
 
 .modal-form-input:focus {
-    border-color: $accent-color;
+  border-color: var(--accent-color);
 }
 
 .modal-form-input:focus~.modal-form-input-svg {
-    fill: $accent-color;
+  fill: var(--accent-color);
 }
 
 .modal-form-message {
-    width: 100%;
-    height: 120px;
-    resize: none;
-    padding: 12px 16px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 .modal-form-message:focus {
-    border-color:$accent-color;
+  border-color: var(--accent-color);
 }
 
 .modal-form-message::placeholder {
-   @include font(12px, 1.17);
-    color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form-check-label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  @include font(14px, 1.71);
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 30px;
 
-    color:  $primary-text-color;
-a {
-    display: inline;
-    text-decoration: underline;
-    color:  $accent-color;
+  color: var(--primary-text-color);
 }
-  &::before  {
-    display: block;
-    content: "";
-    width: 16px;
-    height: 15px;
-    margin-right: 8px;
-    /* margin-left: 12px;*/
-    background-image: url(../images/icon.svg), url(../images/icon-check.svg);
-    background-size: contain, 0;
-    background-repeat: no-repeat;
-    .modal-form-check:checked + & {
-    background-size: 0, contain;
+
+.modal-form-check-label a {
+  display: inline;
+  text-decoration: underline;
+  color: var(--accent-color);
 }
-}}
+
+.modal-form-check-label::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  /* margin-left: 12px;*/
+  background-image: url(../images/icon.svg), url(../images/icon-check.svg);
+  background-size: contain, 0;
+  background-repeat: no-repeat;
+}
+
+.modal-form-check:checked+.modal-form-check-label::before {
+  background-size: 0, contain;
+}
+
+.modal-form-btn:focus {
+  outline: none;
+}
+
 .modal-form-btn {
-    display: block;
-    width: 200px;
-    min-height: 50px;
-    margin: 0 auto;
-    padding: 10px 31px;
-    font-family: inherit;
-@include font(16px, 1.88, 700);
-    letter-spacing: 0.06em;
+  display: block;
+  width: 200px;
+  min-height: 50px;
+  margin: 0 auto;
+  padding: 10px 31px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
 
-    color: $primary-gov-color;
-    background-color: $accent-color;
+  color: var(--primary-gov-color);
+  background-color: var(--accent-color);
 
-    border-radius: 4px;
-    border-width: 0;
- &:focus {
-    outline: none;
-}
+  border-radius: 4px;
+  border-width: 0;
 }
